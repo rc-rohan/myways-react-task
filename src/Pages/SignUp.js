@@ -1,11 +1,7 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './SignUp.scss'
 
 function SignUp() {
-  const { state } = useLocation();
-  console.log(state);
-  const [modal, setModal] = useState(false);
 
   return (
     <div className={"signUp"}>

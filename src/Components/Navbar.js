@@ -12,7 +12,12 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar">
-        <div className="navbar__menu-icons" onClick={() => {setClick(!click)}}>
+        <div
+          className="navbar__menu-icons"
+          onClick={() => {
+            setClick(!click);
+          }}
+        >
           <i
             className={
               click ? "bx bx-menu hamburgerIcons" : "bx bx-x crossIcon"
@@ -25,6 +30,7 @@ const Navbar = () => {
         <ul className={click ? "navbar__menu " : "navbar__menu active"}>
           <li className="navbar__menu__items">
             <Link
+              to="/"
               className="navbar__dropdown-links"
               onClick={() => setDropdown(!dropdown)}
             >
@@ -38,7 +44,7 @@ const Navbar = () => {
               to="/instant-apply"
               onClick={() => setClick(false)}
             >
-              Instant Apply{" "}
+              Instant Apply
               <img className="instant-logo" src={InstantLogo} alt="img" />
             </Link>
           </li>
@@ -57,7 +63,7 @@ const Navbar = () => {
           <li className="navbar__menu__items">
             <Link
               className="primary-text"
-              to={{ pathname: "/signUp", state: { modal: true } }}
+              to='/signUp'
             >
               SIGN UP
             </Link>

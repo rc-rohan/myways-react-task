@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./Components/Navbar";
-import Home from './Components/Home'
-import SignUp from "./Components/SignUp";
-import Login from "./Components/Login";
+import Home from "./Pages/Home";
+import SignUp from "./Pages/SignUp";
+import Login from "./Pages/Login";
 
 function App() {
   return (
@@ -11,13 +11,10 @@ function App() {
       <div className="app">
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/signUp" component={SignUp}/>
-          <Route path="/logIn"  component={Login}/>
-          <Route path="/about-us" />
-          <Route path="/hire-right-talent" />
-          <Route path="/find-matching-internship" />
+          <Route path="/signUp" component={SignUp} />
+          <Route path="/logIn" component={Login} />
         </Switch>
+        <Route path="/" component={Home} />
       </div>
     </Router>
   );

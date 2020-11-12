@@ -20,14 +20,14 @@ const Navbar = () => {
         >
           <i
             className={
-              click ? "bx bx-menu hamburgerIcons" : "bx bx-x crossIcon"
+              click ? "bx bx-x crossIcon" : " bx bx-menu hamburgerIcons"
             }
           ></i>
         </div>
         <Link to="/" className="navbar__logo">
           <img src={MyWaysLogo} alt="" />
         </Link>
-        <ul className={click ? "navbar__menu " : "navbar__menu active"}>
+        <ul className={click ? "navbar__menu active" : "navbar__menu "}>
           <li className="navbar__menu__items">
             <Link
               to="/"
@@ -61,10 +61,7 @@ const Navbar = () => {
         </ul>
         <ul className="navbar__menu--permanent">
           <li className="navbar__menu__items">
-            <Link
-              className="primary-text"
-              to='/signUp'
-            >
+            <Link className="primary-text" to="/signUp">
               SIGN UP
             </Link>
           </li>

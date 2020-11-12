@@ -12,8 +12,12 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar">
-        <div className="navbar__menu-icons" onClick={() => setClick(!click)}>
-          <i className={click ? "bx bx-menu hamburgerIcons" : "bx bx-x crossIcon"}></i>
+        <div className="navbar__menu-icons" onClick={() => {setClick(!click)}}>
+          <i
+            className={
+              click ? "bx bx-menu hamburgerIcons" : "bx bx-x crossIcon"
+            }
+          ></i>
         </div>
         <Link to="/" className="navbar__logo">
           <img src={MyWaysLogo} alt="" />
@@ -51,12 +55,15 @@ const Navbar = () => {
         </ul>
         <ul className="navbar__menu--permanent">
           <li className="navbar__menu__items">
-            <Link className="signUp" to="/signUp">
+            <Link
+              className="primary-text"
+              to={{ pathname: "/signUp", state: { modal: true } }}
+            >
               SIGN UP
             </Link>
           </li>
           <li className="navbar__menu__items">
-            <Link className="login" to="/login">
+            <Link className=" btn-dark" to="/login">
               LOGIN
             </Link>
           </li>

@@ -1,0 +1,89 @@
+.login{
+  background: rgba($color: #333, $alpha: .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1112;
+
+  .login__modal{
+    position: relative;
+    width: 30%;
+    background-color:#fff ;
+    padding-top: 6rem;
+
+    .closeIcon{
+      position: absolute;
+      top: 15%;
+      right: 10%;
+      color: #444;
+      font-size: 3rem;
+    }
+
+    h1{
+      margin: 2rem;
+      font-size: 3rem;
+    }
+
+    .student-details{
+      border: 1px solid #7F8C8D;
+      margin: 4rem 2rem;
+      height: 28rem;
+      text-align: center;
+      padding: 2rem ;
+
+      h5{
+        width: 50%;
+        font-weight: 500;
+        margin: auto;
+        font-size: 2rem;
+        padding: .5rem 0;
+        border-bottom: 2px solid #7ecb20;
+      }
+      .inputFields{
+        margin: 2rem 0;
+        input{
+          display: block;
+          width: 100%;
+          margin: auto;
+          font-size: 1.4rem;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          border:1px solid #7F8C8D;
+          border-radius:.5rem ;
+        }
+      }
+      .btn-dark{
+        width: 100%;
+        display: block;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+      }
+      strong{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .login {
+    &__modal {
+      width: calc(100% - 30rem) !important;
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  
+  .login {
+    &__modal {
+      width: 100% !important;
+    }
+  }
+}

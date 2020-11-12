@@ -1,3 +1,10 @@
-.dropdown__menu--clicked{
-  
+.dropdown__menu{
+  position: absolute;
+  top:15%;
+
+  li{
+    padding: 1rem;
+    border-bottom:1px solid #333 ;
+  }
+
 }

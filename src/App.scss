@@ -5,11 +5,26 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{font-size: 62.5%;}
+html {
+  font-size: 62.5%;
+}
 .app {
   font-family: "Open Sans", sans-serif;
 }
-a{
+ul{
+  list-style: none;
+}
+a {
   text-decoration: none;
   color: #000;
+}
+.primary-text{
+  color: #7ecb20;
+}
+.btn-dark {
+  background: #7ecb20;
+  border-radius: 10rem;
+  color: #fff;
+  border: none;
+
 }

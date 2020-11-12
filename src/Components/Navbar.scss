@@ -1,15 +1,17 @@
 .navbar {
   display: flex;
   padding: 1rem 10rem;
-  // box-shadow: ;
-  height: 8rem;
+  box-shadow: 0 2px 10px 1px rgba($color: #333, $alpha: .1);
+  height: 6rem;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border: 2px solid red;
 
   &__logo {
     margin-right: auto;
+    img{
+    width: 80%;
+    }
   }
   &__menu-icons {
     display: none;
@@ -50,15 +52,12 @@
       align-items: center;
       list-style: none;
 
-      .signUp {
-        color: #7ecb20;
-      }
-      .login {
-        background: #7ecb20;
-        padding: 0.5rem 2.5rem;
+
+      .btn-dark {
+        padding: 0.5rem 3rem;
         border-radius: 10rem;
-        color: #fff;
         transition: all ease 0.2s;
+
         &:hover {
           font-size: 1.5rem;
           // todo transform
@@ -104,3 +103,20 @@
     }
   }
 }
+@media only screen and (max-width: 425px) {
+  .navbar{
+    padding : .5rem
+  }
+}
+@media only screen and (max-width: 425px) {
+  .navbar{
+    padding: 0;
+    &__menu{
+      &__items{
+        margin-right: 1rem;
+      }
+    }
+
+  }
+}
+

@@ -1,0 +1,96 @@
+.signUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba($color: #333, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 122;
+
+  .modal {
+    background: #fff;
+    position: relative;
+    height: 40rem;
+    width: 60rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0 4rem;
+
+    .closeIcon {
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      font-weight: 400;
+      font-size: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-top: 4rem;
+    }
+    h5 {
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 1rem 0 4rem;
+    }
+
+    form {
+      .usernames {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input:first-child {
+          margin-right: 1rem;
+        }
+      }
+
+      input {
+        margin: 1rem auto;
+        font-size: 1.4rem;
+        padding: 1rem;
+        width: 60%;
+        border: 1px solid #7f8c8d;
+        border-radius: 0.5rem;
+      }
+
+      & > input {
+        display: block;
+        margin: 1rem auto;
+      }
+      .btn-dark {
+        width: 60%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .signUp {
+    .modal {
+      width: calc(100% - 100px);
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+  html{
+    font-size: 58%;
+  }
+  .signUp .modal{
+    padding: 0 2rem;
+
+
+    form input,form .usernames,form .btn-dark{
+      width: 100%;
+    }
+  }
+}
